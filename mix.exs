@@ -5,7 +5,7 @@ defmodule FakeServer.Mixfile do
     [
       app: :fake_server,
       version: "2.1.0",
-      elixir: "~> 1.4",
+      elixir: "~> 1.18",
       description: description(),
       package: package(),
       aliases: aliases(),
@@ -21,16 +21,16 @@ defmodule FakeServer.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :cowboy], mod: {FakeServer.Application, []}]
+    [extra_applications: [:logger, :cowboy]]
   end
 
   defp deps do
     [
       {:cowboy, "~> 2.5"},
-      {:poison, ">= 1.0.0"},
-      {:faker, "~> 0.9", only: :test},
+      {:poison, "~> 6.0"},
+      {:faker, "~> 0.16", only: :test},
       {:ex_doc, "~> 0.19", only: :dev},
-      {:httpoison, "~> 0.13", only: :test},
+      {:httpoison, "~> 2.0", only: :test},
       {:excoveralls, "~> 0.7", only: :test}
     ]
   end
@@ -52,6 +52,7 @@ defmodule FakeServer.Mixfile do
 
   defp aliases do
     [test: "test --no-start"]
+    # []
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/integration/support"]

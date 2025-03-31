@@ -1,5 +1,5 @@
 defmodule FakeServerRouterTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case, async: false
 
   describe "#create" do
     test "returns {:ok, router} with an empty route list" do

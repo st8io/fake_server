@@ -1,5 +1,5 @@
 defmodule ResponseListTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: false
   alias FakeServer.ResponseList
   alias FakeServer.Response
 

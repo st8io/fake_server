@@ -1,5 +1,5 @@
 defmodule FakeServer.InstanceTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: false
 
   alias FakeServer.Instance
 

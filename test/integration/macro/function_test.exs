@@ -90,7 +90,9 @@ defmodule FakeServer.Integration.FunctionTest do
       assert response1.status_code == 200
 
       response2 =
-        HTTPoison.get!("#{FakeServer.address()}/test", %{}, hackney: [cookie: ["logged_in=false"]])
+        HTTPoison.get!("#{FakeServer.address()}/test", %{},
+          hackney: [cookie: ["logged_in=false"]]
+        )
 
       assert response2.status_code == 403
     end

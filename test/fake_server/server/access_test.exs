@@ -1,5 +1,5 @@
 defmodule FakeServer.Server.AccessTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: false
   alias FakeServer.Server.Access
 
   test "compute access for a route" do
