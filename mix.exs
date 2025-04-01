@@ -52,7 +52,6 @@ defmodule FakeServer.Mixfile do
 
   defp aliases do
     [test: "test --no-start"]
-    # []
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/integration/support"]

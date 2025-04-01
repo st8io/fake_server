@@ -1,5 +1,5 @@
 defmodule ResponseTest do
-  use ExUnit.Case, async: false
+  use ExUnit.Case
   alias FakeServer.Response
 
   describe "#new" do

@@ -1,5 +1,5 @@
 defmodule FakeServer.RouteTest do
-  use ExUnit.Case, async: false
+  use ExUnit.Case
 
   alias FakeServer.Route
   alias FakeServer.Response

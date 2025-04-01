@@ -14,7 +14,7 @@ defmodule MyResponseFactory do
 end
 
 defmodule FakeServer.Integration.ResponseFactoryTest do
-  use ExUnit.Case, async: false
+  use ExUnit.Case
 
   import FakeServer
 

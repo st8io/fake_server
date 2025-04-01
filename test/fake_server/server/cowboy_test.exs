@@ -1,5 +1,5 @@
 defmodule FakeServer.CowboyTest do
-  use ExUnit.Case, async: false
+  use ExUnit.Case, async: true
 
   alias FakeServer.Cowboy
   alias FakeServer.Instance

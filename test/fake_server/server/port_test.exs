@@ -1,5 +1,5 @@
 defmodule FakeServer.PortTest do
-  use ExUnit.Case, async: false
+  use ExUnit.Case
 
   alias FakeServer.Port
 

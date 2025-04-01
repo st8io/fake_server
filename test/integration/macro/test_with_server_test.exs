@@ -1,5 +1,5 @@
 defmodule FakeServer.Integration.TestWithServerTest do
-  use ExUnit.Case, async: false
+  use ExUnit.Case
 
   import FakeServer
   alias FakeServer.Request
