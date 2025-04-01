@@ -147,7 +147,12 @@ defmodule FakeServer.Integration.TestWithServerTest do
                count: 1
              )
 
-      assert !request_received("/test1", method: "WRONG", headers: headers, body: "body", count: 1)
+      assert !request_received("/test1",
+               method: "WRONG",
+               headers: headers,
+               body: "body",
+               count: 1
+             )
 
       HTTPoison.get!("#{FakeServer.address()}/test1", headers)
       HTTPoison.put!("#{FakeServer.address()}/test1", "body", headers)

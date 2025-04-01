@@ -4,7 +4,7 @@ defmodule MyResponseFactory do
   def person_response do
     ok(
       %{
-        name: Faker.Name.name(),
+        name: Faker.Person.name(),
         email: Faker.Internet.free_email(),
         company: %{name: Faker.Company.name(), county: Faker.Address.country()}
       },
